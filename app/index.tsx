@@ -1,10 +1,11 @@
 import { Text, View, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 import { useCallback } from 'react';
+import { TrashIcon } from "react-native-heroicons/solid"
 import * as SplashScreen from 'expo-splash-screen';
-import { AcademicCapIcon } from "react-native-heroicons/outline";
 import { userApi } from "./services/api"
 import { decode, encode } from "base-64"
+import { Button } from "./components"
 
 if (!global.btoa) {
   global.btoa = encode;
@@ -39,12 +40,7 @@ export default function App() {
 
   return (
     <View className="flex-1 bg-lighGray items-center justify-center">
-      <TouchableOpacity onPress={() => deneme()}>
-        <Text className='font-montBold text-2xl'>Inter asdasdBold</Text>
-        <Text className='font-montRegular text-3xl'>Inter Regular</Text>
-      <AcademicCapIcon size={30} color="red" />
-      </TouchableOpacity>
-      <Text className='font-montSemiBold text-4xl'>Inter SemiBold</Text>
+      <Button icon={() => <TrashIcon size={30} color="white" />} buttonText='selamlar' onPress={() => console.log("aksdl;aksd")} />
     </View>
   );
 }

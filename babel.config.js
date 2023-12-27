@@ -11,6 +11,16 @@ module.exports = function(api) {
         "safe": false,
         "allowUndefined": true
     }],
+    [
+      require.resolve('babel-plugin-module-resolver'),
+      {
+        cwd: 'babelrc',
+        extensions: ['.ts', '.tsx', '.js', '.ios.js', '.android.js'],
+        alias: {
+          '@components': './app/components/index'
+        }
+      }
+    ],
       "nativewind/babel",
       "react-native-reanimated/plugin",
       "expo-router/babel"

@@ -4,6 +4,9 @@
     "name": "ParentWiser",
     "slug": "ParentWiser",
     "version": "1.0.0",
+    "experiments": {
+      "tsconfigPaths": true
+    },
     "scheme": "your-app-scheme",
     "packagerOpts": { "config": "metro.config.js", "sourceExts": [ "js","jsx","svg","ts","tsx"] },
     "orientation": "portrait",

@@ -1,6 +1,5 @@
 {
   "expo": {
-    "entryPoint": "./src/App.tsx",
     "name": "ParentWiser",
     "slug": "ParentWiser",
     "version": "1.0.0",

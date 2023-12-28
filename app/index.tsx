@@ -3,9 +3,9 @@ import { useFonts } from 'expo-font';
 import { useCallback } from 'react';
 import { TrashIcon } from "react-native-heroicons/solid"
 import * as SplashScreen from 'expo-splash-screen';
-import { userApi } from "./services/api"
+import { userApi } from "@api"
 import { decode, encode } from "base-64"
-import { Button } from "./components"
+import { Button, SortButton } from "@components"
 
 if (!global.btoa) {
   global.btoa = encode;
@@ -40,7 +40,7 @@ export default function App() {
 
   return (
     <View className="flex-1 bg-lighGray items-center justify-center">
-      <Button icon={() => <TrashIcon size={30} color="white" />} buttonText='selamlar' onPress={() => console.log("aksdl;aksd")} />
+      <SortButton icon={() => <TrashIcon size={24} color="red" />} />
     </View>
   );
 }

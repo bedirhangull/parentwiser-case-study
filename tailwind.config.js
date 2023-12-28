@@ -12,7 +12,7 @@ module.exports = {
         primary: "#FEAF00",
         dark: "#0F172A",
         lighGray: "#6B7280",
-        somberRed: "#FF0000"
+        somberRed: "#FF0000",
       }
     },
   },

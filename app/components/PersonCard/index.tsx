@@ -32,7 +32,7 @@ const PersonCard = (props: IPersonCard) => {
                         <Text className="ml-auto font-montSemiBold text-xs text-black">{age}</Text>
                     </View>
                     <View className="flex flex-row p-4">
-                        <Text className="font-montRegular text-xs text-gray-500">Hometow</Text>
+                        <Text className="font-montRegular text-xs text-gray-500">Hometown</Text>
                         <Text className="ml-auto font-montSemiBold text-xs text-black">{hometown}</Text>
                     </View>
                 </View>

@@ -5,7 +5,7 @@ import { TrashIcon } from "react-native-heroicons/solid"
 import * as SplashScreen from 'expo-splash-screen';
 import { userApi } from "@api"
 import { decode, encode } from "base-64"
-import { Button, SortButton } from "@components"
+import { Button, SortButton, PersonCard } from "@components"
 
 if (!global.btoa) {
   global.btoa = encode;
@@ -39,8 +39,8 @@ export default function App() {
   }
 
   return (
-    <View className="flex-1 bg-lighGray items-center justify-center">
-      <SortButton icon={() => <TrashIcon size={24} color="red" />} />
+    <View className="flex-1 bg-lighGray items-center justify-center p-4">
+      <PersonCard name='Bedirhan' age={24} hometown='Afyon' />
     </View>
   );
 }

@@ -5,7 +5,8 @@
     "baseUrl": "./", 
     "paths": {
       "@components": ["app/components/index"],
-      "@api": ["app/services/api"]
+      "@api": ["app/services/api"],
+      "@colors": ["app/constants/colors"],
     }
   }
 }

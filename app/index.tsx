@@ -5,7 +5,7 @@ import { TrashIcon } from "react-native-heroicons/solid"
 import * as SplashScreen from 'expo-splash-screen';
 import { userApi } from "@api"
 import { decode, encode } from "base-64"
-import { Button, SortButton, PersonCard, MenuButton } from "@components"
+import { Button, SortButton, PersonCard, PersonalCard } from "@components"
 import COLORS from '@colors';
 
 if (!global.btoa) {
@@ -40,9 +40,8 @@ export default function App() {
   }
 
   return (
-    <View className="flex-1 bg-lighGray items-center justify-center p-4">
-      <MenuButton active icon={() => <TrashIcon color={COLORS.primary} size={30} />} menuTitle='Ana sayfa' />
-      <MenuButton active={false} icon={() => <TrashIcon color={COLORS.primary} size={30} />} menuTitle='Ana sayfa' />
+    <View className="flex-1 bg-white items-center justify-center p-4">
+      <PersonalCard avatar="https://w7.pngwing.com/pngs/529/832/png-transparent-computer-icons-avatar-user-profile-avatar.png" role='admin' status='active' name='Bedirhan'  />
     </View>
   );
 }

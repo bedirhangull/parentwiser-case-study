@@ -28,10 +28,6 @@ Tech stacks:
 
 #### Commit Message
 
-```http
-  GET /api/items/${id}
-```
-
 | Parameter |      | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `Tag`      | `:` | <YOUR_COMMIT_MESSAGE>|

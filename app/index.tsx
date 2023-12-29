@@ -1,12 +1,9 @@
 import { Text, View, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
-import { useCallback } from 'react';
-import { TrashIcon } from "react-native-heroicons/solid"
+import { useCallback, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
-import { userApi } from "@api"
 import { decode, encode } from "base-64"
-import { Button, SortButton, PersonCard, PersonalCard } from "@components"
-import COLORS from '@colors';
+import { router } from 'expo-router';
 
 if (!global.btoa) {
   global.btoa = encode;
@@ -27,6 +24,7 @@ export default function App() {
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded || fontError) {
       await SplashScreen.hideAsync();
+      router.replace("/(drawer)/home");
     }
   }, [fontsLoaded, fontError]);
 
@@ -34,14 +32,9 @@ export default function App() {
     return null;
   }
 
-  const deneme = async() => {
-    const users = await userApi.listUsersUsersGet()
-    console.log(users.data)
-  }
-
   return (
-    <View className="flex-1 bg-white items-center justify-center p-4">
-      <PersonalCard avatar="https://w7.pngwing.com/pngs/529/832/png-transparent-computer-icons-avatar-user-profile-avatar.png" role='admin' status='active' name='Bedirhan'  />
+    <View className="flex-1 bg-white items-center justify-center" onLayout={onLayoutRootView}>
+      <Text className='text-xl font-semibold text-black'>ParentWiser</Text>
     </View>
   );
 }

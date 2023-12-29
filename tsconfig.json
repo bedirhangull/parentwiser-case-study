@@ -7,6 +7,7 @@
       "@components": ["app/components/index"],
       "@api": ["app/services/api"],
       "@colors": ["app/constants/colors"],
+      "@layout": ["app/layout"]
     }
   }
 }

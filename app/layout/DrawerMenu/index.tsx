@@ -20,16 +20,16 @@ const DrawerMenu = () => {
                 <PersonalCard role="admin" avatar="https://w7.pngwing.com/pngs/857/213/png-transparent-man-avatar-user-business-avatar-icon.png" status="active" name="Bedirhan"  />
             </View>
             <View>
-                {MenuItems.map((item: IMenuItem) => {
+                {MenuItems.map((item: IMenuItem, key: number) => {
                    return(
-                       <MenuButton active={item.status} icon={() => item.icon} menuTitle={item.title} />
+                       <MenuButton key={key} active={item.status} icon={() => item.icon} menuTitle={item.title} />
                    ) 
                 })}
             </View>
             <View className="mt-auto">
-                {BottomMenuItems.map((item: IMenuItem) => {
+                {BottomMenuItems.map((item: IMenuItem, key: number) => {
                     return(
-                       <MenuButton active={item.status} icon={() => item.icon} menuTitle={item.title} />
+                       <MenuButton key={key}  active={item.status} icon={() => item.icon} menuTitle={item.title} />
                     )
                 })}
             </View>

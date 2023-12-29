@@ -12,7 +12,7 @@ interface IPersonCard {
     editAction: () => void
 }
 
-const PersonCard = (props: IPersonCard) => {
+const StudentCard = (props: IPersonCard) => {
 
     const { name, age, hometown, deleteAction, editAction } = props;
 
@@ -41,4 +41,4 @@ const PersonCard = (props: IPersonCard) => {
     )
 }
 
-export default PersonCard;
+export default StudentCard;

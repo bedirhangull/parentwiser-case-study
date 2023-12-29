@@ -17,12 +17,12 @@ const StudentCard = (props: IPersonCard) => {
     const { name, age, hometown, deleteAction, editAction } = props;
 
     return (
-        <View className="flex bg-white w-full border-neutral-200 border rounded-md">
+        <View className="flex bg-white w-full border-neutral-200 border rounded-md my-2">
             <View className="flex flex-row p-2 border-b border-neutral-200 items-center">
                 <Text className="mr-auto font-montBold text-xs text-black">{name}</Text>
                 <View className="flex-row">
-                    <SortButton icon={() => <TrashIcon size={24} color={COLORS.somberRed} />} onPress={() => deleteAction()} className="mr-4" />
                     <SortButton icon={() => <PencilIcon size={24} color={COLORS.lighGray} />} onPress={() => editAction()} />
+                    <SortButton icon={() => <TrashIcon size={24} color={COLORS.somberRed} />} onPress={() => deleteAction()} className="mr-4" />
                 </View>
             </View>
             <View>

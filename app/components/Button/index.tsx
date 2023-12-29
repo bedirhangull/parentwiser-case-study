@@ -12,7 +12,7 @@ const Button = (props: IButton) => {
     const { buttonText, onPress, icon } = props;
 
     return (
-        <TouchableOpacity onPress={onPress} className="flex flex-row justify-center items-center p-4 bg-primary rounded-xl w-full">
+        <TouchableOpacity onPress={onPress} className="flex-row justify-center items-center p-4 bg-primary rounded-xl">
             {icon()}
             <Text className="text-sm ml-2 font-montBold text-white text-center">{buttonText}</Text>
         </TouchableOpacity>

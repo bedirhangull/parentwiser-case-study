@@ -15,6 +15,10 @@ interface IStudent {
   hometown: string
 }
 
+interface DeleteUserResponseModel {
+  is_successful: boolean
+}
+
 export default function Home() {
 
   const [students, setStudents] = useState<IStudent[]>();
@@ -39,8 +43,24 @@ export default function Home() {
     }
   };
 
+  const deleteStudent = async (key: string) => {
+    try {
+      const res = await userApi.deleteUserUsersUserKeyDelete(key);
+      const data: DeleteUserResponseModel = res.data;
+      if (data.is_successful) {
+        //TODO May we can show information modal for users
+        setStudents((prevStudents) =>
+          (prevStudents ?? []).filter((student: IStudent) => student.key !== key)
+        );
+      }
+    } catch (error) {
+      console.warn(error);
+    }
+  };
+
   const renderItem = (student: IStudent) => (
     <StudentCard
+      deleteAction={() => deleteStudent(student.key)}
       name={student.name}
       hometown={student.hometown}
       age={student.age}

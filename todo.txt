@@ -1,4 +1,4 @@
 For doc
-- absolute paths
-- font sizes
-- feature branch
+- absolute paths --> status --> completed
+- font sizes --> status --> completed
+- feature branch --> status --> completed

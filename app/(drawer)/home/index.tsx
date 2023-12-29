@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { Text, View, ActivityIndicator } from "react-native";
 import { Header } from "@layout";
-import { Button, SortButton, StudentCard } from "@components";
+import { Button, SortButton } from "@components";
+import StudentCard from "app/components/StudentCard";
 import { userApi } from "@api"
 import COLORS from "@colors";
 import { PlusIcon, Bars3Icon, Squares2X2Icon } from "react-native-heroicons/solid";

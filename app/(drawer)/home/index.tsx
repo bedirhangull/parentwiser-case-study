@@ -7,6 +7,7 @@ import { userApi } from "@api"
 import COLORS from "@colors";
 import { PlusIcon, Bars3Icon, Squares2X2Icon } from "react-native-heroicons/solid";
 import { FlatList } from "react-native-gesture-handler";
+import { STUDENTS } from "@utils";
 
 interface IStudent {
   key: string
@@ -28,6 +29,7 @@ export default function Home() {
     getStudents();
   }, []);
 
+  //GET STUDENTS
   const getStudents = async () => {
     try {
       const res = await userApi.listUsersUsersGet();
@@ -43,6 +45,7 @@ export default function Home() {
     }
   };
 
+  //DELETE STUDENT BY KEY
   const deleteStudent = async (key: string) => {
     try {
       const res = await userApi.deleteUserUsersUserKeyDelete(key);
@@ -55,6 +58,28 @@ export default function Home() {
       }
     } catch (error) {
       console.warn(error);
+    }
+  };
+
+  //ADD STUDENT
+  const addStudent = async () => {
+    setLoading(true);
+    const randomNumber = Math.floor(Math.random() * 50);
+    let randomStudent: IStudent = STUDENTS[randomNumber];
+  
+    try {
+      const res = await userApi.createUserUsersPost({
+        name: randomStudent.name,
+        age: randomStudent.age,
+        hometown: randomStudent.hometown,
+      });
+  
+      setStudents((prevStudents) => [...(prevStudents ?? []), randomStudent]);
+      console.log(res);
+    } catch (error) {
+      console.warn(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -79,7 +104,7 @@ export default function Home() {
           <Button
             icon={() => <PlusIcon size={24} color="white" />}
             buttonText="Add New Student"
-            onPress={() => console.log("add new student")}
+            onPress={() => addStudent()} 
           />
         </View>
         <View className="flex-row ml-4 items-center">

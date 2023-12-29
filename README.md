@@ -25,8 +25,10 @@ Tech stacks:
 | `structure` | `(structure):` | Changes about sturctures like folder sturcture, changes about documentation etc.
 | `pages` | `(page):` | For create a new page
 | `documentation` | `(documentation):` | For changes about documentation
+| `feature` | `(feature):` | for new adding new feature like CRUD operations
 
 #### Commit Message
+
 
 | Parameter |      | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -80,4 +82,53 @@ For generate new services if any changes
 | `montBold` | `Bold` | font-montBold
 | `montSemiBold` | `Semi Bold` | font-montSemiBold
 
+
+## Font Sizes References
+
+
+| Font Size |   Type  | Value                |
+| :-------- | :------- | :------------------------- |
+| `text-xs` | `px` | 12 
+| `text-sm` | `px` | 14
+| `text-base` | `px` | 16
+| `text-2xl` | `px` | 24
+
+
+
+
+
+## Font Family References
+
+
+| Font |   Type  | Font in Tailwindcss                |
+| :-------- | :------- | :------------------------- |
+| `montRegular` | `Regular` | font-montRegular 
+| `montBold` | `Bold` | font-montBold
+| `montSemiBold` | `Semi Bold` | font-montSemiBold
+
+
+## Font Sizes References
+
+
+| Font Size |   Type  | Value                |
+| :-------- | :------- | :------------------------- |
+| `text-xs` | `px` | 12 
+| `text-sm` | `px` | 14
+| `text-base` | `px` | 16
+| `text-2xl` | `px` | 24
+
+
+
+
+## Absolute paths
+
+The absolute path values used in this project are defined as follows. These definitions are used to provide easier access to modules and files.
+
+| Path Alias    | Absolute Path                   | Usage                                        | Directory                           |
+| :------------ | :------------------------------ | :------------------------------------------- | :---------------------------------- |
+| `@components` | `app/components/index`          | `import { button } from "@components"`       | `app/components/index.ts`           |
+| `@api`        | `app/services/api`               | `import { userApi } from "@api"`             | `app/services/api.ts`               |
+| `@colors`     | `app/constants/colors`           | `import COLORS from "@colors"`                                          | `app/constants/colors`               |
+| `@layout`     | `app/layout`                     | `import { Header } from "@layout"`                                            | `app/layout/index.ts`                        |
+| `@utils`      | `app/utils`                      | `import { MenuItems } from "@utils"`                                            | `app/utils/index.ts`                         |
 

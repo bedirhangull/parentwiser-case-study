@@ -1,12 +1,6 @@
 import React from 'react';
 import { Drawer } from 'expo-router/drawer';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-
-const CustomDrawerContent = () => (
-  <View style={styles.container}>
-    <Text>Drawer Content</Text>
-  </View>
-);
+import { DrawerMenu } from "@layout"
 
 const screenOptions = {
   headerShown: false,
@@ -16,7 +10,7 @@ export default function Layout() {
   return (
     <Drawer
       screenOptions={screenOptions}
-      drawerContent={(props) => <CustomDrawerContent />}
+      drawerContent={() => <DrawerMenu />}
     >
       <Drawer.Screen
         name="home/index"
@@ -28,15 +22,3 @@ export default function Layout() {
     </Drawer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 20,
-  },
-  drawerItem: {
-    padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
-  },
-});

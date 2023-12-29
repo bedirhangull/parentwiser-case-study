@@ -17,7 +17,7 @@ const PersonalCard = (props: IPersonalCard) => {
     }
 
     return(
-        <View className="flex flex-row items-center w-full bg-gray-200 p-4 rounded-xl">
+        <View className="flex flex-row items-center w-full bg-gray-100 p-4 rounded-xl">
             <View>
                 <View className={`h-4 w-4 z-10 right-0 -top-1 rounded-full absolute ${statusHandler()}`}/>
                 <Image className="rounded-full h-12 w-12" source={{uri: avatar}} />

@@ -18,6 +18,9 @@ const Header = (props: IHeader) => {
         navigation.dispatch(DrawerActions.openDrawer())
     }
 
+    // TODO --> create new component header title component (recurent component)
+    // TODO --> when open the drawer you should remove the headerTitle on home page
+    
     return(
         <View className="flex flex-row bg-white p-4">
             <View className="flex flex-row items-center mr-auto">

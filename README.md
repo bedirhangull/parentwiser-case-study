@@ -1,7 +1,7 @@
 
 # ParentWiser case study
-About Project: The project lists students on the main screen.  You can also add students, delete students and edit student information.
-
+About Project: The project lists students on the main screen.  You can also add students, delete students and edit student information. ***if you want to watch the demo video of my work you can click on the parentwiser logo***
+[![IMAGE ALT TEXT HERE](https://parentwiser.com/wp-content/uploads/2023/10/parentwiser-primary-logo.png)](https://www.youtube.com/shorts/k_gfriLQrhU) 
 
 
 
